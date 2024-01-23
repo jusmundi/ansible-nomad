@@ -2,6 +2,8 @@
 # File: main.yml handlers file for nomad
 
 - name: Restart nomad
+  ignore_errors: "{{ ansible_check_mode }}"
+  when: nomad_service_manage | bool
   ansible.builtin.service:
     name: nomad
     state: restarted
