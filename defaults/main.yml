@@ -125,7 +125,6 @@ nomad_host_volumes_skip_ignore: false
 nomad_host_networks: []
 nomad_options: {}
 nomad_meta: {}
-nomad_artifact: {}
 nomad_bootstrap_expect: "{{ nomad_servers | count or 3 }}"
 nomad_chroot_env: false
 nomad_plugins: {}
